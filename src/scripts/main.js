@@ -22,10 +22,4 @@ function getEmployees(list) {
 }
 
 sortList(document.querySelector('ul'));
-
-const employees = getEmployees(document.querySelector('ul'));
-
-if (employees.length > 0) {
-  document.querySelector('#employeeCount').textContent =
-    `Total Employees: ${employees.length}`;
-}
+getEmployees(document.querySelector('ul'));
