@@ -1,5 +1,6 @@
 'use strict';
 
+///
 function convertToNumber(item) {
   return Number(item.dataset.salary.replace(/[$,]/g, ''));
 }
