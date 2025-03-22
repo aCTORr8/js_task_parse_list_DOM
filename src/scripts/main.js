@@ -1,6 +1,5 @@
 'use strict';
 
-///
 function convertToNumber(item) {
   return Number(item.dataset.salary.replace(/[$,]/g, ''));
 }
@@ -23,4 +22,10 @@ function getEmployees(list) {
 }
 
 sortList(document.querySelector('ul'));
-getEmployees(document.querySelector('ul'));
+
+const employees = getEmployees(document.querySelector('ul'));
+
+if (employees.length > 0) {
+  document.querySelector('#employeeCount').textContent =
+    `Total Employees: ${employees.length}`;
+}
